@@ -50,12 +50,12 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-\newfontfamily\headingfont[]{Helvetica Neue Bold}
+\newfontfamily\bodyfont{Bebas Neue}
+\newfontfamily\thinfont{BebasNeueLight}
+\newfontfamily\headingfont{BebasNeueBold}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+\setmainfont[Mapping=tex-text, Color=textcolor]{TraditionellSans}
 
 %\setmathfont{XITS Math}
 
@@ -147,6 +147,13 @@
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
     #4\vspace{\parsep}%
+  }\\}
+
+\newcommand{\myentry}[3]{%
+  #1&\parbox[t]{11.8cm}{%
+    \textbf{#2}%
+    \hfill%
+    {\footnotesize\addfontfeature{Color=lightgray} #3}%
   }\\}
 
 
