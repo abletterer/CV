@@ -59,9 +59,7 @@
 
 \firsthead{
 \centering
-{\fontsize{36}{36}\headingfont \usekomavar{fromname}}\\[5mm]
-\fontsize{21}{21}\bodyfont Etudiant en Informatique Graphique} % Your current job title
-
+{\addfontfeature{LetterSpace=20.0}\fontsize{36}{36}\se
 %----------------------------------------------------------------------------------------
 %  FOOTER SECTION
 %----------------------------------------------------------------------------------------
@@ -85,12 +83,9 @@
 %----------------------------------------------------------------------------------------
 
 \begin{letter}{ % Address of the company you are applying to
-    École Doctorale MSII\\
-Direction de la Recherche\\
-Département Formation Doctorale\\
-Collège des Écoles Doctorales\\
-46, Boulevard de la Victoire\\
-67000 STRASBOURG
+HR Dept. --- Corporation\\
+123 Pleasant Lane\\
+12345 City, State
 }
 
 \setkomavar{subject}{Lettre de motivation} % This is the bold text saying 'Cover Letter', remove it if you don't like it

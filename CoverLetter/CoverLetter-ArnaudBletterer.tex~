@@ -30,9 +30,13 @@
 
 \usepackage{fontspec} % Allows font customization
 \usepackage{marvosym} % Allows the use of symbols
-\usepackage[frenchb]{babel} % Required to compile in Windows
+\usepackage[english]{babel} % Required to compile in Windows
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont {Adobe Garamond Pro} % Main document font
+\setsansfont {Gill Sans} % Used in the from address line above the to address
 
 \renewcommand{\normalsize}{\fontsize{12.5}{17}\selectfont} % Sets the font size and leading
 
@@ -40,13 +44,12 @@
 %  PERSONAL INFORMATION
 %----------------------------------------------------------------------------------------
 
-\setkomavar{fromname}{Arnaud Bletterer} % Your name
-\setkomavar{fromaddress}{2, Route de Forstheim\\67500 Haguenau\\France} % Your address
-\setkomavar{fromphone}{+336 64 32 44 28} % Your phone number
-\setkomavar{fromemail}{arnaud.bletterer@etu.unistra.fr} % Your email address
-\setkomavar{fromurl}{http://abletterer.fr} % Your personal website
+\setkomavar{fromname}{John Smith} % Your name
+\setkomavar{fromaddress}{123 Broadway\\City\\Country} % Your address
+\setkomavar{fromphone}{(000) 111-1111} % Your phone number
+\setkomavar{fromemail}{john@smith.com} % Your email address
 \setkomavar{place}{} % City written before the date, put your city here if you want this
-\setkomavar{signature}{Arnaud Bletterer} % Your name as you want it to appear in the signature
+\setkomavar{signature}{John Smith} % Your name as you want it to appear in the signature
 
 % These are not used in this document, uncomment if you would like to use them and refer to them as \usekomavar{name}
 %\setkomavar{fromfax}{+1 (1)23 456789} % Your fax number
@@ -59,8 +62,8 @@
 
 \firsthead{
 \centering
-{\fontsize{36}{36}\headingfont \usekomavar{fromname}}\\[5mm]
-\fontsize{21}{21}\bodyfont Etudiant en Informatique Graphique} % Your current job title
+{\addfontfeature{LetterSpace=20.0}\fontsize{36}{36}\selectfont\scshape \usekomavar{fromname}}\\[5mm]
+\fontsize{21}{21}\selectfont\scshape Programmer at Initech } % Your current job title
 
 %----------------------------------------------------------------------------------------
 %  FOOTER SECTION
@@ -81,19 +84,16 @@
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-% Cover Letter CONTENTS
+% COVER LETTER CONTENTS
 %----------------------------------------------------------------------------------------
 
 \begin{letter}{ % Address of the company you are applying to
-    École Doctorale MSII\\
-Direction de la Recherche\\
-Département Formation Doctorale\\
-Collège des Écoles Doctorales\\
-46, Boulevard de la Victoire\\
-67000 STRASBOURG
+HR Dept. --- Corporation\\
+123 Pleasant Lane\\
+12345 City, State
 }
 
-\setkomavar{subject}{Lettre de motivation} % This is the bold text saying 'Cover Letter', remove it if you don't like it
+\setkomavar{subject}{Cover Letter} % This is the bold text saying 'Cover Letter', remove it if you don't like it
 
 \opening{Dear Recruiter,}
 
