@@ -9,19 +9,23 @@
 \documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 %\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[frenchb]{babel}
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{datetime}
+\newdateformat{mydateformat}{\THEDAY~\monthname~\THEYEAR}
 
 % personal data
 \name{Arnaud}{Bletterer}
@@ -53,28 +57,40 @@
 \cventry{2012--2014}{Université de Strasbourg}{Master Informatique, option Informatique et Sciences de l'Image}{FRANCE}{}{}
 \cventry{2011--2012}{Université de Strasbourg}{Licence Informatique}{FRANCE}{}{}
 \cventry{2009--2011}{IUT Robert Schuman}{DUT Informatique}{FRANCE}{}{}
+\cventry{2009}{LEGTI Alphonse Heinrich}{Baccalauréat Scientifique, option Sciences de l'Ingénieur}{FRANCE}{Mention Assez Bien}{}
 
 \section{Mémoire de Master}
 \cvitem{Sujet}{\emph{Outils multidimensionnels de déformation}}
 \cvitem{Encadrants}{Dominique BECHMANN, Isabelle CHARPENTIER, Pierre KRAEMER}
 \cvitem{Description}{Mise en place d'une méthode de mélange d'outils de déformation}
+\begin{itemize}
+\item Etude d'outils de déformation spatiale de différentes dimensions
+\item Méthode de mélange d'outils de déformation conservant des propriétés de continuité
+\end{itemize}
 
 \section{Expérience}
 \subsection{Scientifique}
-\cventry{2013 -- 3 mois}{Projet de développement}{Génération automatique de cage}{Strasbourg, FRANCE}{PIERRE}{Génération une cage de déformation épousant la forme de l'objet à déformer}
-\cventry{2013 -- 3 mois}{Travail d'Etude et de Recherche}{Multi-triangulation}{Strasbourg, FRANCE}{}{Gestion d'un maillage triangulaire représenté à divers niveaux de résolution}
+\cventry{2013 -- 3 mois}{Projet de développement}{Génération automatique de cage}{Strasbourg, FRANCE}{}{}
+\cventry{2013 -- 3 mois}{Travail d'Etude et de Recherche}{Multi-triangulation}{Strasbourg, FRANCE}{}{}
 \subsection{Professionnelle}
 \cventry{2011 -- 3 mois}{Développeur JavaScript}{Dialog Insight}{Québec, CANADA}{Stage de DUT}{}
 \cventry{Eté 2009-2013}{Divers travaux en temps que saisonnier}{Schaeffler FRANCE}{Haguenau, FRANCE}{}{}
 
 \section{Compétences Informatique}
-\cvitem{Génie Logiciel}{C, C++, Java, C\#}
-\cvitem{Développement Web}{HTML5, CSS3, PHP, JavaScript, Bootstrap, JQuery}
+\cvdoubleitem{Génie Logiciel}{C, C++, Java, C\#, Outils UNIX}{Développement Web}{HTML5, CSS3, PHP, JS}
 
-\section{Langues \hfill Intérêts}
-\cvdoubleitem{Français}{Langue maternelle}{Sportifs}{Athlétisme, Sport électronique}
-\cvdoubleitem{Anglais}{Avancé}{Professionnels}{Technologies Web, Programmation GPU}
+\section{Divers}
+\begin{minipage}[t]{0.5\maincolumnwidth}
+\subsection{Langues}
+\cvitem{Français}{Langue maternelle}
+\cvitem{Anglais}{Avancé}
 \cvitem{Allemand}{Scolaire}
+\end{minipage}
+\begin{minipage}[t]{0.5\maincolumnwidth}
+\subsection{Intérêts}
+\cvitem{Français}{Langue maternelle}
+\cvitem{Anglais}{Avancé}
+\end{minipage}
 
 % Publications from a BibTeX file without multibib
 %  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
@@ -95,20 +111,23 @@
 \clearpage
 %-----       letter       ---------------------------------------------------------
 % recipient data
-\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
-\date{\today}
-\opening{Dear Sir or Madam,}
-\closing{Yours faithfully,}
+\recipient{Ecole Doctorale "MSII"}
+{Direction de la Recherche\\
+Département Formation Doctorale\\
+Collège des Ecoles Doctorales\\
+46 Boulevard de la Victoire\\
+67000 Strasbourg}
+\date{\mydateformat\today}
+\opening{Madame, Monsieur,}
+\closing{Veuillez recevoir, Madame, Monsieur, l'expression de mes salutations distinguées.}
 \enclosure[Pièce jointe]{Curriculum Vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
 \makelettertitle
 
-Je suis actuellement en train de terminer mon Master Informatique, option Informatique et Sciences de l'Image. Je postule pour le sujet de thèse "Outils de déformation multidimensionnels" proposé par Dominique BECHMANN, PR EX1.
+Je suis étudiant en M2 Informatique, option Informatique et Sciences de l'Image, à l'Université de Strasbourg. Je postule pour le sujet de thèse "Outils de déformation multidimensionnels" proposé par Dominique BECHMANN, Professeure à l'Université de Strasbourg et Directrice de l'équipe IGG du laboratoire ICube.
 
-Je réalise mon stage de fin de Master au sein de l'équipe IGG du laboratoire ICube, sous la tutelle de Dominique BECHMANN, Isabelle CHARPENTIER et Pierre KRAEMER, autour du sujet "Outils de déformation multidimensionnels". Nous avons abouti à la mise en place d'une première méthode de mélange d'outils de déformation spatiale permettant d'obtenir des déformations lisses. Ces résultats concluants laissent envisager un bon avenir à la réussite de la thèse.
+Je réalise actuellement mon stage de fin de Master au sein de l'équipe IGG du laboratoire ICube, sous la tutelle de Dominique BECHMANN, Isabelle CHARPENTIER et Pierre KRAEMER, autour du sujet "Outils de déformation multidimensionnels". Ce stage a permis d'aboutir à la mise en place d'une méthode de mélange d'outils de déformation spatiale permettant d'obtenir des déformations conservant des propriétés de continuité. Ces résultats concluants laissent envisager un bon avenir à la réussite d'une future thèse.
 
-Mon dossier scolaire est loin d'être irréprochable, cependant j'ai énormément de motivation quant il s'agit d'apprendre des choses inconnues et de travailler à chercher de nouvelles méthodes. Je me plais dans la recherche, je suis enfin certain de savoir dans quel domaine je souhaite travailler.
-
-Veuillez recevoir, Madame, Monsieur, l'expression de mes salutations distinguées.
+Je suis quelqu'un de très motivé, quand j'ai un objectif en vue je me donne tous les moyens nécessaires pour y arriver. De plus, faire une thèse serait pour moi le moyen de conclure mes études universitaires en appliquant l'ensemble des connaissances que j'ai pu acquérir, et que j'acquérirai, afin d'améliorer la qualité du travail que je pourrais fournir.
 
 \makeletterclosing
 
