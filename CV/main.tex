@@ -6,23 +6,18 @@
 % available at http://www.latex-project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
-\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\moderncvstyle{classic}
+\moderncvcolor{blue}
 
 % character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage[utf8]{inputenc}
 \usepackage[frenchb]{babel}
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 \usepackage{datetime}
 \newdateformat{mydateformat}{\THEDAY~\monthname~\THEYEAR}
@@ -36,48 +31,44 @@
 \homepage{abletterer.fr}
 \photo[64pt][0.4pt]{Profil}
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
+%-----       resume       -----------------------------------------------------
 \begin{document}
 \makecvtitle
 
 \section{Scolarité}
-\cventry{2012--2014}{Université de Strasbourg}{Master Informatique, option Informatique et Sciences de l'Image}{FRANCE}{}{}
-\cventry{2011--2012}{Université de Strasbourg}{Licence Informatique}{FRANCE}{}{}
-\cventry{2009--2011}{IUT Robert Schuman}{DUT Informatique}{FRANCE}{}{}
-\cventry{2009}{LEGTI Alphonse Heinrich}{Baccalauréat Scientifique, option Sciences de l'Ingénieur}{FRANCE}{Mention Assez Bien}{}
+\cventry{2012--2014}{Master Informatique, option
+Informatique et Sciences de l'Image}{Université de Strasbourg}{FRANCE}{}{}
+\cventry{2011--2012}{Licence Informatique}{Université de Strasbourg}{FRANCE}{}{}
+\cventry{2009--2011}{Diplôme Universitaire de Technologie Informatique}{IUT Robert Schuman}{FRANCE}{}{}
+\cventry{2009}{Baccalauréat Scientifique, option
+Sciences de l'Ingénieur}{LEGTI Alphonse Heinrich}{FRANCE}{}{}
 
 \section{Mémoire de Master}
-\cvitem{Sujet}{\emph{Outils multidimensionnels de déformation}}
-\cvitem{Encadrants}{Dominique BECHMANN, Isabelle CHARPENTIER, Pierre KRAEMER}
-\cvitem{Description}{Mise en place d'une méthode de mélange d'outils de déformation}
+\cvitem{\textbf{Sujet}}{\emph{Outils multidimensionnels de déformation}}
+\cvitem{\textbf{Encadrants}}{Dominique BECHMANN, Isabelle CHARPENTIER, Pierre KRAEMER}
+\cvitem{\textbf{Description}}{Mise en place d'une méthode de mélange d'outils de
+déformation}
 \begin{itemize}
-\item Etude d'outils de déformation spatiale de différentes dimensions
-\item Méthode de mélange d'outils de déformation conservant des propriétés de continuité
+\item Etude des outils de déformation spatiale existants
+\item Méthode de mélange d'outils de déformation conservant des propriétés de
+continuité
 \end{itemize}
 
 \section{Expérience}
 \subsection{Scientifique}
-\cventry{2013 -- 3 mois}{Projet de développement}{Génération automatique de cage}{Strasbourg, FRANCE}{}{}
-\cventry{2013 -- 3 mois}{Travail d'Etude et de Recherche}{Multi-triangulation}{Strasbourg, FRANCE}{}{}
+\cventry{2013 -- 3 mois}{Projet de développement}{Génération automatique de
+cage}{Strasbourg, FRANCE}{}{}
+\cventry{2013 -- 3 mois}{Travail d'Etude et de Recherche}{Multi-triangulation}
+{Strasbourg, FRANCE}{}{}
 \subsection{Professionnelle}
-\cventry{2011 -- 3 mois}{Développeur JavaScript}{Dialog Insight}{Québec, CANADA}{Stage de DUT}{}
-\cventry{2009-2013}{Divers travaux en temps que saisonnier}{Schaeffler FRANCE}{Haguenau, FRANCE}{}{}
+\cventry{2011 -- 3 mois}{Développeur JavaScript}{Dialog Insight}{Québec,
+CANADA}{Stage de DUT}{}
+\cventry{2009-2013}{Divers travaux en temps que saisonnier}{Schaeffler
+FRANCE}{Haguenau, FRANCE}{}{}
 
 \section{Compétences Informatique}
-\cvdoubleitem{Génie Logiciel}{C, C++, Java, C\#, Outils UNIX}{Développement Web}{HTML5, CSS3, PHP, JS}
+\cvitem{\textbf{Langages}}{C, C++, Java, C\#, Outils UNIX, HTML5, CSS3, PHP, JS,
+CGoGN}
 
 \section{Langues}
 \cvitem{Français}{Langue maternelle}
@@ -85,24 +76,9 @@
 \cvitem{Allemand}{Scolaire}
 \section{Intérêts}
 \cvdoubleitem{Sportifs}{Athlétisme, Arts Martiaux}{Professionnels}{Web, GPGPU}
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
-
-% \bibliographystyle{plain}
-% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
 \clearpage
-%-----       letter       ---------------------------------------------------------
+%-----       letter       -----------------------------------------------------
 % recipient data
 \recipient{Ecole Doctorale "MSII"}
 {Direction de la Recherche\\
@@ -112,19 +88,32 @@ Collège des Ecoles Doctorales\\
 67000 Strasbourg}
 \date{\mydateformat\today}
 \opening{Madame, Monsieur,}
-\closing{Veuillez recevoir, Madame, Monsieur, l'expression de mes salutations distinguées.}
-\enclosure[Pièce jointe]{Curriculum Vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+\closing{Veuillez recevoir, Madame, Monsieur, l'expression de mes salutations
+distinguées.}
+\enclosure[Pièce jointe]{Curriculum Vit\ae{}}
 \makelettertitle
 
-Je suis étudiant en M2 Informatique, option Informatique et Sciences de l'Image, à l'Université de Strasbourg. Je postule pour le sujet de thèse "Outils de déformation multidimensionnels" proposé par Dominique BECHMANN, Professeure à l'Université de Strasbourg et Directrice de l'équipe IGG du laboratoire ICube.
+Je suis étudiant en M2 Informatique, option Informatique et Sciences de l'Image,
+à l'Université de Strasbourg. Je postule pour le sujet de thèse "Outils de
+déformation multidimensionnels" proposé par Dominique BECHMANN, Professeure à
+l'Université de Strasbourg et Directrice de l'équipe IGG du laboratoire ICube.
 
-Je réalise actuellement mon stage de fin de Master au sein de l'équipe IGG du laboratoire ICube, sous la tutelle de Dominique BECHMANN, Isabelle CHARPENTIER et Pierre KRAEMER, autour du sujet "Outils de déformation multidimensionnels". Ce stage a permis d'aboutir à la mise en place d'une méthode de mélange d'outils de déformation spatiale permettant d'obtenir des déformations conservant des propriétés de continuité. Ces résultats concluants laissent envisager un bon avenir à la réussite d'une future thèse.
+Je réalise actuellement mon stage de fin de Master au sein de l'équipe IGG du
+laboratoire ICube, sous la tutelle de Dominique BECHMANN, Isabelle CHARPENTIER
+et Pierre KRAEMER, autour du sujet "Outils de déformation multidimensionnels".
+Ce stage a permis d'aboutir à la mise en place d'une méthode de mélange d'outils
+de déformation spatiale permettant d'obtenir des déformations conservant des
+propriétés de continuité. Ces résultats concluants laissent envisager un bon
+avenir à la réussite d'une future thèse.
 
-Je suis quelqu'un de très motivé, quand j'ai un objectif en vue je me donne tous les moyens nécessaires pour y arriver. De plus, faire une thèse serait pour moi le moyen de conclure mes études universitaires en appliquant l'ensemble des connaissances que j'ai pu acquérir, et que j'acquérirai, afin d'améliorer la qualité du travail que je pourrais fournir.
+Je suis quelqu'un de très motivé, quand j'ai un objectif en vue je me donne tous
+les moyens nécessaires pour y arriver. De plus, faire une thèse serait pour moi
+le moyen de conclure mes études universitaires en appliquant l'ensemble des
+connaissances que j'ai pu acquérir, et que j'acquérirai, afin d'améliorer la
+qualité du travail que je fournirais.
 
 \makeletterclosing
 
-%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
 
 
