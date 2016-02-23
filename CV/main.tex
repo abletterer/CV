@@ -1,122 +1,143 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%% start of file `template.tex'. % Copyright 2006-2013 Xavier Danaux
+%(xdanaux@gmail.com).
 %
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+% This work may be distributed and/or modified under the conditions of the
+% LaTeX Project Public License version 1.3c, available at http://www.latex-
+% project.org/lppl/.
 
 
-\documentclass[11pt,a4paper,sans]{moderncv}
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{classic}
-\moderncvcolor{blue}
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{green}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
-\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 \usepackage[frenchb]{babel}
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 \usepackage{datetime}
 \newdateformat{mydateformat}{\THEDAY~\monthname~\THEYEAR}
 
 % personal data
 \name{Arnaud}{Bletterer}
-\address{2, Route de Forstheim}{67500 HAGUENAU}{FRANCE}
+\address{25 Avenue du Tapis Vert -- Bâtiment C1}{06220 VALLAURIS}{FRANCE}
 \phone[mobile]{06 64 32 44 28}
-\phone[fixed]{03 69 02 09 52}
-\email{arnaud.bletterer@etu.unistra.fr}
-\homepage{abletterer.fr}
+\email{blettere@i3s.unice.fr}
+\homepage{i3s.unice.fr/\textasciitilde blettere}
 \photo[64pt][0.4pt]{Profil}
 
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
 \begin{document}
-
-
-%-----       letter       -----------------------------------------------------
-% recipient data
-\recipient{InSimo}
-{c/o IHU de Strasbourg \\
-1 Place de l'Hôpital,
-67091 Strasbourg, France}
-\date{\mydateformat\today}
-\opening{Madame, Monsieur,}
-\closing{Veuillez recevoir, Madame, Monsieur, l'expression de mes salutations
-distinguées.}
-\enclosure[Pièce jointe]{Curriculum Vit\ae{}}
-\makelettertitle
-
-Je suis étudiant en M2 Informatique, option Informatique et Sciences de
-l'Image, à l'Université de Strasbourg. Je réalise actuellement mon stage de
-Master au sein de l'équipe IGG du laboratoire ICube à Strasbourg, sous la
-tutelle de Dominique BECHMANN, Isabelle CHARPENTIER et Pierre KRAEMER, autour
-du sujet "Outils de déformation multidimensionnels". Le travail réalisé
-pendant ce stage a permis d'aboutir à la mise en place d'une nouvelle méthode
-de mélange d'outils de déformation spatiale permettant d'obtenir des
-déformations conservant des propriétés de continuité.
-
-Ce stage m'a permis de découvrir une première facette du monde de la
-recherche. Celui-ci m'a réellement donné envie de continuer dans ce domaine.
-Néanmoins, je trouve qu'une partie de la recherche manque d'applications et
-qu'il n'y a pas de réelle concrétisation dans ce qui est réalisé. C'est
-pourquoi je cherche à travailler dans un département de R&D au sein d'une
-entreprise du domaine de l'informatique graphique. Les 
-
-\makeletterclosing
-
-\clearpage
-%-----       resume       -----------------------------------------------------
-
 \makecvtitle
 
 \section{Scolarité}
-\cventry{2012--2014}{Master Informatique, option
-Informatique et Sciences de l'Image}{Université de Strasbourg}{STRASBOURG}{}{}
-\cventry{2011--2012}{Licence Informatique}{Université de
-Strasbourg}{STRASBOURG}{}{}
-\cventry{2009--2011}{Diplôme Universitaire de Technologie Informatique}{IUT
-Robert Schuman}{STRASBOURG}{}{}
-\cventry{2009}{Baccalauréat Scientifique, option Sciences de l'Ingénieur}{LEGTI
-Alphonse Heinrich}{HAGUENAU}{}{}
+\cventry{2014--2015}{Université de Nice}{1ère année de thèse : Doctorat en Automatique, Traitement du Signal et des Images}{FRANCE}{}{}
+\cventry{2012--2014}{Université de Strasbourg}{Master Informatique, option Informatique et Sciences de l'Image}{FRANCE}{Mention Assez Bien (Major)}{}
+\cventry{2011--2012}{Université de Strasbourg}{Licence Informatique}{FRANCE}{}{}
+\cventry{2009--2011}{IUT Robert Schuman}{DUT Informatique}{FRANCE}{}{}
+\cventry{2009}{LEGTI Alphonse Heinrich}{Baccalauréat Scientifique, option Sciences de l'Ingénieur}{FRANCE}{Mention Assez Bien}{}
 
-\section{Mémoire de Master}
-\cvitem{\textbf{Sujet}}{\emph{Outils multidimensionnels de déformation}}
-\cvitem{\textbf{Encadrants}}{Dominique BECHMANN, Isabelle CHARPENTIER, Pierre
-KRAEMER}
-\cvitem{\textbf{Description}}{Mise en place d'une méthode de mélange d'outils de
-déformation}
-\begin{itemize}
-\item Etude des outils de déformation spatiale existants
-\item Méthode de mélange d'outils de déformation conservant des propriétés de
-continuité
-\end{itemize}
+\section{Doctorat}
+\cvitem{Sujet}{\emph{Du nuage de points au maillage surfacique : modéliser et visualiser les données 3D massives}}
+\cvitem{Directeur}{Marc ANTONINI}
+\cvitem{Co-encadrant}{Frédéric PAYAN}
+\cvitem{Laboratoire}{Laboratoire I3S - Projet MediaCoding}
 
 \section{Expérience}
-\subsection{Académique}
-\cventry{2013 -- 3 mois}{Projet de développement}{Génération automatique de
-cage}{Strasbourg, FRANCE}{}{}
-\cventry{2013 -- 3 mois}{Travail d'Etude et de Recherche}{Multi-triangulation}
-{Strasbourg, FRANCE}{}{}
+\subsection{Scientifique}
+\cventry{2014 -- 6 mois}{Stage de recherche}{Outils de déformation multidimensionnels}{Strasbourg, FRANCE}{Laboratoire ICube - Equipe IGG}{}
+\cventry{2013 -- 3 mois}{Projet de développement}{Génération automatique de cage}{Strasbourg, FRANCE}{}{}
+\cventry{2013 -- 3 mois}{Travail d'Etude et de Recherche}{Multi-triangulation}{Strasbourg, FRANCE}{}{}
 \subsection{Professionnelle}
-\cventry{2011 -- 3 mois}{Développeur JavaScript}{Dialog Insight}{Québec,
-CANADA}{Stage de DUT}{}
-\cventry{2009-2013}{Divers travaux en temps que saisonnier}{Schaeffler
-FRANCE}{Haguenau, FRANCE}{}{}
+\cventry{2011 -- 3 mois}{Développeur JavaScript}{Dialog Insight}{Québec, CANADA}{Stage de DUT}{}
+\cventry{2009-2013}{Divers travaux en temps que saisonnier}{Schaeffler FRANCE}{Haguenau, FRANCE}{}{}
 
-% \section{Compétences Informatique}
-% \cvitem{\textbf{Langages}}{C, C++, Java, C\#, Outils UNIX, HTML5, CSS3, PHP, JS,
-% CGoGN}
+\section{Compétences Informatique}
+\cvdoubleitem{Génie Logiciel}{C, C++, Matlab, Python, Java, C\#}{Dév. Web}{HTML5, CSS3, PHP, JS}
 
 \section{Langues}
 \cvitem{Français}{Langue maternelle}
 \cvitem{Anglais}{Avancé}
 \cvitem{Allemand}{Scolaire}
-\section{Intérêts}
-\cvdoubleitem{\textbf{Sportifs}}{Athlétisme, Arts
-Martiaux}{\textbf{Professionnels}}{~~Web, GPGPU}
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+% \clearpage
+% %-----       letter       ---------------------------------------------------------
+% % recipient data
+% \recipient{~}{~}
+% \date{\mydateformat\today}
+% \opening{Madame, Monsieur, }
+% \closing{Veuillez recevoir, Madame, Monsieur, l'expression de mes salutations
+% distinguées.}
+% \enclosure[Pièce jointe]{Curriculum Vit\ae{}}
+% \makelettertitle
+%
+% Je m'appelle Arnaud BLETTERER, je suis en 1ère année de thèse dans la
+% discipline "Automatique, Traitement du Signal et des Images". Je vous écris
+% afin de candidater à un DCCE pour l'année universitaire 2015/2016.
+%
+% Je réalise actuellement ma thèse au sein du projet MediaCoding du Laboratoire
+% I3S de Sophia Antipolis, sous la direction de Marc ANTONINI et l'encadrement
+% de Frédéric PAYAN, autour du sujet "Du nuage de points au maillage surfacique
+% : modéliser et visualiser les données 3D massives". Cette thèse s'intéresse à
+% la problématique de numérisation de données denses, dans des domaines comme la
+% conservation du patrimoine culturel et les systèmes d'information géographique
+% (SIG).
+%
+% Ma formation universitaire m'a apporté des connaissances dans beaucoup de
+% domaines de l'Informatique, que ce soit au niveau de l'algorithmie, de la
+% programmation orientée objet, de la programmation web, des bases de données,
+% ou bien encore du traitement des images pour ne citer que ceux-là. Cela m'a
+% permis d'obtenir une vision d'ensemble de l'Informatique, et aujourd'hui
+% j'aimerai fortement l'appliquer en participant à des missions d'enseignement.
+%
+% J'ai un fort intérêt dans le fait de donner des cours. En effet, non seulement
+% d'un point de vue professionnel, en envisageant de continuer après mon
+% doctorat dans la recherche académique, en tant que Maître de Conférences. Mais
+% aussi d'un point de vue personnel. J'ai toujours apprécié expliquer le
+% fonctionnement de certains principes au sein de mon entourage (familial et
+% professionnel). J'apprécie l'échange qui peut avoir lieu, mais aussi
+% participer à l'intérêt d'une personne pour un sujet spécifique.
+%
+% J'espère que vous saurez considérer ma candidature. Sachez que je reste à
+% votre entière disposition pour toute information complémentaire.
+%
+% \makeletterclosing
 
 \end{document}
-
-
-%% end of file `template.tex'.
